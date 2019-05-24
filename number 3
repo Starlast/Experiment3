@@ -1,0 +1,44 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int p, bravo, size, alpha;
+	char in[30];
+	
+    cout << "Problem no.3" << endl;
+    cout << "" << endl;
+	cout << "Enter the size of the array   :";
+	cin >> size;
+	cout << "" << endl;
+	cout << "" << endl;
+	cout << "Enter the array of the element:";
+	for (alpha = 0; alpha <size; alpha++)
+	{
+		cin >> in[alpha];
+	}
+	for(alpha= 0; alpha<size; alpha++)
+	{
+		for(bravo = alpha+1; bravo < size; bravo++)
+		{
+			if(in[alpha]<in[bravo])
+			{
+			p = in[alpha];
+		in[alpha] = in[bravo];
+				in[bravo] = p;
+			}
+		}
+	}
+		cout << "" << endl;
+	cout << "" << endl;
+	cout << "the no. of elements ";
+	for(alpha = 0; alpha < size; alpha++)
+	{
+		cout << in[alpha];
+	}
+	    _getch();
+		return 0;
+}
