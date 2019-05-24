@@ -1,0 +1,57 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+	int val[10];
+	int mInd = 1; 
+	int lInd = 1;
+	int total;
+	int s, l;
+	
+	double avg;
+     cout << "Problem 1" << endl;
+    
+	for (int i = 0; i < 10; i++) {
+		cout << "please input integer    " << i + 1 << endl;
+		cin >> val[i];
+	}
+
+	mInd = 1;
+	lInd = 1;
+	for (int i = 0; i < 10; i++) {
+
+		if (val[mInd] < val[i]) {
+			mInd = i;
+		}
+		l = val[mInd];
+		
+		if (val[lInd] > val[i]) {
+			lInd = i;
+		}	
+		s = val[lInd];
+		
+	}
+
+	for (int i = 0; i < 10;i++) {
+		total = total + val[i];
+	}
+
+	avg = total / 10;
+	
+     cout << "" << endl;
+     cout << "" << endl;
+    cout << "" << endl;
+	cout << "The largest input is: " << l << endl;
+	 cout << "" << endl;
+    
+	cout << "The smallest input is: " << s << endl;
+	 cout << "" << endl;
+   
+	cout << "The average all of inputs is: " << avg << endl;
+
+	return 0;
+}
